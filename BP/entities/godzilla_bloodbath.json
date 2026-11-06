@@ -1,0 +1,159 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "megalofobia:godzilla_bloodbath",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "spawn_egg": {
+        "base_color": "#1a1a1a",
+        "overlay_color": "#8b0000"
+      }
+    },
+    "component_groups": {
+      "godzilla:enraged": {
+        "minecraft:movement": {
+          "value": 0.45
+        },
+        "minecraft:attack": {
+          "damage": 120
+        },
+        "minecraft:scale": {
+          "value": 16.0
+        }
+      },
+      "godzilla:calm": {
+        "minecraft:movement": {
+          "value": 0.20
+        },
+        "minecraft:attack": {
+          "damage": 60
+        },
+        "minecraft:scale": {
+          "value": 14.0
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["godzilla", "boss", "monster", "mob"]
+      },
+      "minecraft:health": {
+        "value": 5000,
+        "max": 5000
+      },
+      "minecraft:scale": {
+        "value": 14.0
+      },
+      "minecraft:collision_box": {
+        "width": 8.0,
+        "height": 24.0
+      },
+      "minecraft:boss": {
+        "name": "Godzilla Bloodbath",
+        "should_darken_sky": true,
+        "hud_range": 128
+      },
+      "minecraft:movement": {
+        "value": 0.22
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:fall_damage": {
+        "value": 0.0
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": true,
+        "breathes_water": true
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": false,
+        "can_sink": false,
+        "can_pass_doors": false,
+        "can_open_doors": false
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:attack": {
+        "damage": 75
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 1,
+        "speed_multiplier": 1.2,
+        "track_target": true
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 128
+          },
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "monster"
+            },
+            "max_dist": 64
+          }
+        ]
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 4,
+        "speed_multiplier": 0.8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 5,
+        "look_distance": 128
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 6
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": true
+          }
+        ]
+      }
+    },
+    "events": {
+      "godzilla:set_enraged": {
+        "add": {
+          "component_groups": ["godzilla:enraged"]
+        },
+        "remove": {
+          "component_groups": ["godzilla:calm"]
+        }
+      },
+      "godzilla:set_calm": {
+        "add": {
+          "component_groups": ["godzilla:calm"]
+        },
+        "remove": {
+          "component_groups": ["godzilla:enraged"]
+        }
+      }
+    }
+  }
+}
