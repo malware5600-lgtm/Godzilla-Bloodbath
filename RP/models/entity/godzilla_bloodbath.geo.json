@@ -1,0 +1,61 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.godzilla_bloodbath",
+        "texture_width": 256,
+        "texture_height": 256,
+        "visible_bounds_width": 16,
+        "visible_bounds_height": 32,
+        "visible_bounds_offset": [0, 16, 0]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "body",
+          "parent": "root",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            {"origin": [-16, 16, -12], "size": [32, 48, 24], "uv": [0, 0]}
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "body",
+          "pivot": [0, 64, 0],
+          "cubes": [
+            {"origin": [-12, 64, -16], "size": [24, 24, 28], "uv": [0, 72]}
+          ]
+        },
+        {
+          "name": "left_arm",
+          "parent": "body",
+          "pivot": [18, 54, 0],
+          "cubes": [
+            {"origin": [16, 24, -8], "size": [12, 36, 16], "uv": [112, 0]}
+          ]
+        },
+        {
+          "name": "right_arm",
+          "parent": "body",
+          "pivot": [-18, 54, 0],
+          "cubes": [
+            {"origin": [-28, 24, -8], "size": [12, 36, 16], "uv": [112, 52]}
+          ]
+        },
+        {
+          "name": "tail",
+          "parent": "body",
+          "pivot": [0, 20, 12],
+          "cubes": [
+            {"origin": [-10, 8, 12], "size": [20, 20, 60], "uv": [0, 124]}
+          ]
+        }
+      ]
+    }
+  ]
+}
