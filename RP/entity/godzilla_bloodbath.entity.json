@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "megalofobia:godzilla_bloodbath",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/godzilla_bloodbath"
+      },
+      "geometry": {
+        "default": "geometry.godzilla_bloodbath"
+      },
+      "animations": {
+        "walk": "animation.godzilla.walk",
+        "idle": "animation.godzilla.idle",
+        "attack": "animation.godzilla.attack",
+        "roar": "animation.godzilla.roar"
+      },
+      "animation_controllers": [
+        { "walk_controller": "controller.animation.godzilla.walk" }
+      ],
+      "render_controllers": [
+        "controller.render.godzilla_bloodbath"
+      ],
+      "enable_attachables": true
+    }
+  }
+}
