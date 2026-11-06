@@ -2,7 +2,7 @@
   "format_version": 2,
   "header": {
     "name": "Godzilla Bloodbath BP",
-    "description": "Sistema de Comportamento e Scripting para Megalofobia Add-on",
+    "description": "Add-on de Megalofobia com Godzilla Bloodbath, Sistema de Alerta e Livro de Regras",
     "uuid": "4e1a6792-54b2-4d7a-8f12-9c1234567801",
     "version": [1, 0, 0],
     "min_engine_version": [1, 20, 0]
@@ -25,6 +25,10 @@
     {
       "module_name": "@minecraft/server",
       "version": "1.8.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.2.0"
     }
   ]
 }
